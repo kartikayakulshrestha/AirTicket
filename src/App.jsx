@@ -369,7 +369,7 @@ function App() {
             <div className="bg-[#181818] ml-2 mb-8 h-16 w-64 hover:bg-[#1c2519]">
             <div className={`flex py-5 ${cabinOptions == "hidden" ? "" : "hidden"} ${destinationOptions == "hidden" ? "" : "hidden"}`}>
               <div className="mx-5">  
-                  <button className={`bg-slate-300 ${toggle?"bg-slate-600":"bg-orange-700"} my-1 h-4 w-8 rounded-lg relative`}  onClick={()=>{toggle?settoggle(0):settoggle(1)}}>
+                  <button className={` ${toggle?"bg-slate-600":"bg-orange-700"} my-1 h-4 w-8 rounded-lg relative`}  onClick={()=>{toggle?settoggle(0):settoggle(1)}}>
                     <div className={` h-4 w-4 absolute top-0 rounded-full ${toggle?"right-0 bg-slate-800":"left-0 bg-slate-300"}`}></div>
                   </button>
               </div>
