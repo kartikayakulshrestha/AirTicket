@@ -9,7 +9,7 @@ function App() {
   const [cabinOptions, setcabinOptions] = useState("hidden");
   const [originValue, setOriginValue] = useState("SYD");
   const [destinationValue, setDestinationValue] = useState("SYD");
-
+  const [toggle,settoggle]=useState(0)
   const [s, ss] = useState("SYD");
   const [destinationOptions, setDestinationOptions] = useState("hidden");
   
@@ -369,9 +369,11 @@ function App() {
             <div className="bg-[#181818] ml-2 mb-8 h-16 w-64 hover:bg-[#1c2519]">
             <div className={`flex py-5 ${cabinOptions == "hidden" ? "" : "hidden"} ${destinationOptions == "hidden" ? "" : "hidden"}`}>
               <div className="mx-5">  
-                  <input type="checkbox" name="" id=""  disabled/>
+                  <button className={`bg-slate-300 ${toggle?"bg-slate-600":"bg-orange-700"} my-1 h-4 w-8 rounded-lg relative`}  onClick={()=>{toggle?settoggle(0):settoggle(1)}}>
+                    <div className={` h-4 w-4 absolute top-0 rounded-full ${toggle?"right-0 bg-slate-800":"left-0 bg-slate-300"}`}></div>
+                  </button>
               </div>
-              <p className="text-[#5e5e5e]">Show <span className="text-[#834218]">Pro Filters</span></p>
+              <p className={`${toggle?"text-[#5e5e5e]":"text-[#e8e4e4]"}`}>Show <span className={`${toggle?"text-[#834218]":"text-orange-500"}`}>Pro Filters</span></p>
             </div>
             </div>
             
